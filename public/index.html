@@ -1,15 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset=""UTF-8">
-        <meta name=""viewport" content="width=device.width, initial-scale=1.0">
-        <title>Meeting Cost Calculator</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Cost Calculator</title>
+
+    <!-- Bootstrap/Fonts/Styles/Icon -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header header class="d-flex align-items-center justify-content-center" style="height: 50px; padding: 10px;">
+        <div class="d-flex align-items-center">
+            <a href="https://www.gpcaregroup.org/" class="d-flex align-items-center"
+                style="color: white; text-decoration: none;">
+                ← Back to GP Care Group
+                <img src="https://www.gpcaregroup.org/assets/img/logo.png" alt="GP Care Group Logo"
+                    style="margin-left: 10px; height: 30px;">
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
         <h1>Meeting Cost Calculator</h1>
-        <form id=""calculator-form">
-            <button type=""submit">Calculate</button>
+        <p>Enter a meeting start and end time to get started</p>
+
+        <form id="calculator-form">
+
+            <!-- Time Inputs -->
+            <div class="form-row mt-2 d-flex align-items-center">
+                <div class="col-md-2">
+                    <label for="start-time">Start Time:</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="time" id="start-time" name="start-time" class="form-control" style="max-width: 100px">
+                </div>
+                <div class="col-md-4">
+                    <span id="start-time-help" class="text-danger font-italic">Enter a meeting start time to
+                        begin</span>
+                </div>
+            </div>
+            <div class="form-row mt-2 d-flex align-items-center">
+                <div class="col-md-2">
+                    <label for="end-time">End Time:</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="time" id="end-time" name="end-time" class="form-control" style="max-width: 100px">
+                </div>
+                <div class="col-md-4">
+                    <span id="end-time-help" class="text-danger font-italic"></span>
+                </div>
+            </div>
+
+            <div class="form-row mt-2 d-flex align-items-center">
+                <div class="col-md-2">
+                    <label for="repeats" data-toggle="tooltip"
+                        title="Enter the number of times the meeting will be repeated (keep as one if the meeting is a one-off occurrence)">Occurrences:</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="repeats" name="repeats" class="form-control" value="1" min="1"
+                        style="max-width: 100px" data-toggle="tooltip"
+                        title="Enter the number of times the meeting will be repeated (keep as one if the meeting is a one-off occurrence)">
+                </div>
+            </div>
+
+            <!-- Staff Inputs Section -->
+            <h2 class="mt-4">Staff</h2>
+            <div class="d-flex">
+                <div id="staff-inputs" class="col-md-6"></div> <!-- Dynamic staff inputs will load here -->
+
+                <!-- Total Cost Column -->
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <h2>Total Cost: <span id="total-cost">£0</span></h2>
+                </div>
+            </div>
+
+            <!-- Other Costs -->
+            <h2 class="mt-4">Other Costs</h2>
+            <div class="form-row mt-2 d-flex align-items-center">
+                <div class="col-md-2 col-form-label text-right">
+                    <label for="other_costs_display">Other Costs:</label>
+                </div>
+                <div class="col-md-4">
+                    <!-- Visible input for formatted display -->
+                    <input type="text" id="other_costs_display" class="form-control" style="max-width: 200px"
+                        data-toggle="tooltip" title="Enter other costs - e.g. catering or room hire">
+                    <!-- Hidden input for raw number value -->
+                    <input type="hidden" id="other_costs" name="other_costs">
+                </div>
+            </div>
         </form>
-        <div id="result"></div>
-    </body>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="#" class="footer-link">Back to top</a></p>
+        <p>
+            Developed by Tower Hamlets GP Care Group CIC<br>
+            AI Innovation Lab<br><a href="mailto:thgpcg.ai-lab@nhs.net" class="footer-link">thgpcg.ai-lab@nhs.net</a>
+        </p>
+        <p>
+            © 2024 Tower Hamlets GP Care Group CIC. All rights reserved.<br>
+            Licensed under the
+            <a href="https://www.mozilla.org/en-US/MPL/2.0/" class="footer-link" target="_blank">
+                Mozilla Public License Version 2.0
+            </a>.
+        </p>
+    </footer>
+
+    <!-- JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
