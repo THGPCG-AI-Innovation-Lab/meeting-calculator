@@ -1,0 +1,30 @@
+# Node.js specific files and folders
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
