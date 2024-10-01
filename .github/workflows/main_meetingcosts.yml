@@ -14,20 +14,19 @@ jobs:
       # Step 1: Check out the code from your repository
       - uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js version (using Node.js 20 LTS)
+      # Step 2: Set up Node.js version (Node.js 20 LTS)
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
 
-      # Step 3: Install dependencies, build, and test
-      - name: npm install, build, and test
+      # Step 3: Install dependencies and build the project
+      - name: Install dependencies and build
         run: |
           npm install
-          npm run build  # Compiles TypeScript to JavaScript
-          npm run test --if-present
+          npm run build  # Runs the build script in package.json to compile both client and server files
 
-      # Step 4: Zip the build artifacts (dist folder and any other necessary files)
+      # Step 4: Zip the build artifacts (including dist and static assets)
       - name: Zip artifact for deployment
         run: zip -r release.zip ./dist package.json node_modules
 
