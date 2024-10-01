@@ -1,12 +1,12 @@
 import express, { Request, Response } from 'express';
 import path from 'path';
 import calculatorRoutes from './routes/calculator';
-import { config } from 'dotenv';
+//import { config } from 'dotenv';
 
-config(); // Load environment variables
+//config(); // Load environment variables
 
 const app = express();
-const port: number = parseInt(process.env.PORT || '3000', 10);
+const port: number = parseInt('3000', 10);
 
 // Middleware to serve static files from public folder
 app.use(express.static(path.join(__dirname, 'public')));
