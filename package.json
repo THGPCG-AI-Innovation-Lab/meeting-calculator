@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "dist/app.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.client.json && npm run copy-public",  // Adjusted build script
+    "copy-public": "cp -r public dist/public",  // Copies the public folder to dist
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev app.ts",
     "start": "node dist/app.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build"  // Ensure build runs after installation
   },
   "keywords": [],
   "author": "",
