@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                    // Use ES6 for modern browsers
+      "module": "ES6",                    // Use ES6 modules for browsers
+      "strict": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./public/js",            // Output compiled JS directly to public/js
+      "rootDir": "./src/public/js"        // Root directory for client-side TypeScript
+    },
+    "include": [
+      "src/public/js/**/*.ts"             // Include client-side TypeScript files
+    ],
+    "exclude": ["node_modules"]
+  }
+  

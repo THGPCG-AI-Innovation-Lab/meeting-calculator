@@ -1,0 +1,96 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2c6175; /* Text color */
+}
+
+header {
+  background-color: #0075b2; /* Primary color */
+  color: white;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header img {
+  height: 30px; /* Adjust the size of the logo */
+  margin-right: 10px;
+}
+
+h1,
+h2 {
+  color: #0075b2; /* Primary color */
+}
+
+label {
+  line-height: 1.5;
+  margin-bottom: 0 !important; /* Remove the bootstrap margin */
+ display: flex;
+}
+
+footer {
+  background-color: rgb(33, 37, 41); /* Dark gray color */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: underline;
+}
+
+a {
+  color: #0075b2;
+}
+
+/* Custom Tooltip Styling */
+.tooltip {
+  background-color: #0075B2 !important; /* Primary blue background for outer box */
+  border-radius: 4px;
+  padding: 0 !important; /* Remove extra padding */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.tooltip-inner {
+  background-color: #0075B2 !important; /* Primary blue background for inner box */
+  color: white !important; /* White text */
+  padding: 8px 12px; /* Add padding for better spacing */
+  font-size: 14px; /* Adjust text size */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: #0075B2 !important; /* Match the tooltip background */
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #0075B2 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow::before {
+  border-left-color: #0075B2 !important;
+}
+
+.tooltip.bs-tooltip-right .arrow::before {
+  border-right-color: #0075B2 !important;
+}
+
+/* Optional: Use secondary green for specific tooltips */
+.tooltip.secondary {
+  background-color: #1CB0BE !important;
+}
+
+.tooltip.secondary .tooltip-inner {
+  background-color: #1CB0BE !important;
+}
+
+.tooltip.secondary .arrow::before {
+  border-color: #1CB0BE !important;
+}
